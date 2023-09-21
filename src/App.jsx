@@ -14,6 +14,8 @@ class App extends React.Component {
       selectedOption: '',
       catalogOptions: [{ label:'LAND ROVER', value:'602648ad876c9d0deced24d8'},{label:'JAGUAR',value:'60267b9f876c9d0deced2f40'}],
       selectedCatalogOption: '',
+      productOptions: [{ label:'RANGE ROVER', value:'60264e4d876c9d0deced2614'},{ label:'DEFENDER 90', value:'60264a5f876c9d0deced254a'},{ label:'XF', value:'60267bdc876c9d0deced2f54'},{ label:'RANGE ROVER EVOQUE', value:'60264df9876c9d0deced2606'},{ label:'DISCOVERY', value:'60264de1876c9d0deced2601'},{ label:'F-PACE', value:'60267c07876c9d0deced2f68'},{ label:'I-PACE', value:'60267c10876c9d0deced2f6e'}],
+      selectedProductOption: '',
     }
   }
 
@@ -40,18 +42,16 @@ class App extends React.Component {
 
 
   handleOptionChange = event => {
-
     this.setState({ selectedOption: event.target.value });
-   };
-   handleCatalogOptionChange = event => {
+  };
+  handleCatalogOptionChange = event => {
     this.setState({ selectedCatalogOption: event.target.value });
-   };
-    handleProductOptionChange = event => {
+  };
+  handleProductOptionChange = event => {
     this.setState({ selectedProductOption: event.target.value });
-    };
+  };
 
   handleChange = event => {
-    
     this.setState({ [event.target.name]: event.target.value });
   }
   submit = async (e) => {
@@ -63,6 +63,7 @@ class App extends React.Component {
       "userPhone":    this.state.userPhone,
       "offerCategoryId": this.state.selectedCatalogOption,
       "locationId": this.state.selectedOption,
+      "offerId": this.state.selectedProductOption,
     }
     try {
       const response = window.ochn.register(data, true)
@@ -127,6 +128,17 @@ class App extends React.Component {
                   <select value={this.state.selectedCatalogOption} onChange={this.handleCatalogOptionChange} style={{ width: "100%", height: "44px", border: "1px solid grey", borderRadius: "6px" }}>
                     <option value="">Select an option...</option>
                     {this.state.catalogOptions.map(option => (
+                      <option  value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="input-box">
+                  <span className="details">Product</span>
+                  <select value={this.state.selectedProductOption} onChange={this.handleProductOptionChange} style={{ width: "100%", height: "44px", border: "1px solid grey", borderRadius: "6px" }}>
+                    <option value="">Select an option...</option>
+                    {this.state.productOptions.map(option => (
                       <option  value={option.value}>
                         {option.label}
                       </option>
