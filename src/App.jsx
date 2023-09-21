@@ -135,7 +135,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div id="registerForm" className="button">
-                <input type="submit" value="Submit" onClick={this.submit} />
+                <input type="submit" value="Submit" />
               </div>
             </form>
           </div>
