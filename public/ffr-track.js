@@ -13,7 +13,7 @@ let ochnkey = '082f34176f42a859i85cc3b1';
 
     js = d.createElement(s); js.id = id; js.async = !0;
 
-    js.src = "http://localhost:3000/jsapi/omnichannel.js";
+    js.src = "https://app-premiumauto.footprintsforretail.com/jsapi/omnichannel.js";
 
     ojs.parentNode.insertBefore(js, ojs);
 
