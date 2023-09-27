@@ -14,7 +14,7 @@ class App extends React.Component {
       selectedOption: '',
       catalogOptions: [{ label:'LAND ROVER', value:'602648ad876c9d0deced24d8'},{label:'JAGUAR',value:'60267b9f876c9d0deced2f40'}],
       selectedCatalogOption: '',
-      productOptions: [{ label:'RANGE ROVER', value:'60264e4d876c9d0deced2614'},{ label:'DEFENDER 90', value:'60264a5f876c9d0deced254a'},{ label:'XF', value:'60267bdc876c9d0deced2f54'},{ label:'RANGE ROVER EVOQUE', value:'60264df9876c9d0deced2606'},{ label:'DISCOVERY', value:'60264de1876c9d0deced2601'},{ label:'F-PACE', value:'60267c07876c9d0deced2f68'},{ label:'I-PACE', value:'60267c10876c9d0deced2f6e'}],
+      productOptions: [{ label:'RANGE ROVER', value:'60264e4d876c9d0deced2614'},{ label:'DEFENDER 90', value:'60264a5f876c9d0deced254a'},{ label:'XF', value:'60267bdc876c9d0deced2f54'},{ label:'RANGE ROVER EVOQUE', value:'60264df9876c9d0deced2606'},{ label:'DISCOVERY', value:'60264de1876c9d0deced2601'},{ label:'F-PACE', value:'60267c07876c9d0deced2f68'},{ label:'I-PACE', value:'60267c10876c9d0deced2f6e'},{ label:'DEFENDER 110', value:'60264a7e876c9d0deced2554'},{ label:'DEFENDER 130', value:'62fcf300d523f678c51c32d0'},{ label:'RANGE ROVER VELAR', value:'60264e15876c9d0deced260a'},{ label:'I-PACE', value:'60267c10876c9d0deced2f6e'},{ label:'DISCOVERY SPORT', value:'60264aa5876c9d0deced255c'},{ label:'RANGE ROVER SPORT', value:'60264e2a876c9d0deced260e'},{ label:'F-TYPE Convertible', value:'60267c29876c9d0deced2f7c'},{ label:'F-TYPE Coupe', value:'60267c1c876c9d0deced2f74'},{ label:'E-PACE', value:'60267bf8876c9d0deced2f61'},{ label:'XE', value:'60267bca876c9d0deced2f4d'},{ label:'XJ', value:'60267be9876c9d0deced2f5b'}],
       selectedProductOption: '',
     }
   }
@@ -35,7 +35,6 @@ class App extends React.Component {
           selectedProductOption: data?.data?.offerId,
         })
         }
-        
     };
     window.addEventListener('populatedData', this.handlePopulatedData);
 }
